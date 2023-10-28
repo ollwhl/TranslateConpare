@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+    div {display: inline-block;}
+    #a {margin-left:auto;margin-right: auto;}
+    h1 {text-align: center;}
+    </style>
+<title>翻訳正確性確認</title>
+</head>
+<body>
+<h1>翻訳評価システム</h1>
+<form action="/" method="GET">
+	<br>
+    <div id="a">
+        <br>
+        <textarea name="text" placeholder="テキストを入力してください">hello</textarea>
+        <br>
+        <input type="submit" value="日本語＝＝>英語">
+    </div>
+</form>
+<br>
+<div>
+    <h2>GoogleTranslate</h2>
+    <textarea name="text" placeholder="テキストを入力してください">{{ gt }}</textarea>
+    
+</div>
+<div>
+    <h2>DeepL</h2>
+    <textarea name="text" placeholder="テキストを入力してください">{{ dt }}</textarea>
+</div>
+<div>
+    <h2>Welibo</h2>
+    <textarea name="text" placeholder="テキストを入力してください">{{ wt }}</textarea>
+</div>
+<br>
+<div>
+    <h2>正解に近い訳文</h2>
+    <textarea name="text" placeholder="テキストを入力してください">{{ finaltext }}</textarea>
+</div>
